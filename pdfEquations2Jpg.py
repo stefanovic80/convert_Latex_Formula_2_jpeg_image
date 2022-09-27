@@ -8,30 +8,34 @@ Created on Tue Sep 27 14:37:23 2022
 
 import pdf2image 
 import os
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 #from PIL import Image
+import imageio
 from skimage import io
 import numpy as np
 
 path = '/home/stefano/Documents/thatIt/'
 os.chdir(path)
-pages = pdf2image.convert_from_path('thatIt.pdf')
+name = 'formula'
+pages = pdf2image.convert_from_path(name + '.pdf')
 
 for i in range(len(pages)):
-	pages[i].save('page'+ str(i) +'.jpg', 'JPEG')
-    
-#img = Image.open('page0.jpg')
-image = io.imread('page0.jpg')
+	pages[i].save(name +'.jpeg', 'JPEG')
+image = io.imread(name + '.jpeg')
 
-u = np.where(image[:1500,:,:] != 255)
+#u = np.where(image[:1500,:,:] != 255)
+u = np.where(image != 255)
 
 j = 0
-x_min = min(u[j])
-x_max = max(u[j])
+y_min = min(u[j]) - 5
+y_max = max(u[j]) + 5
+
 
 j = 1
-y_min = min(u[j])
-y_max = max(u[j])
+x_min = min(u[j]) - 5
+x_max = max(u[j]) + 5
 
-plt.imshow(image[x_min:x_max, y_min:y_max, :])
-plt.savefig('prova.png')
+ku = image[y_min:y_max, x_min:x_max, :]
+
+#plt.imshow(ku)
+imageio.imwrite(name + '.jpeg', ku)
