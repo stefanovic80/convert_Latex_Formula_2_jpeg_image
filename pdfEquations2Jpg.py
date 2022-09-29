@@ -39,3 +39,7 @@ ku = image[y_min:y_max, x_min:x_max, :]
 
 #plt.imshow(ku)
 imageio.imwrite(name + '.jpeg', ku)
+
+os.remove(name + '.aux')
+os.remove(name + '.log')
+os.remove(name + '.pdf')
