@@ -42,5 +42,6 @@ imageio.imwrite(name + '.jpeg', ku)
 
 os.remove(name + '.aux')
 os.remove(name + '.log')
+os.remove('B.tex')
 os.remove(name + '.pdf')
 os.remove('B.aux')

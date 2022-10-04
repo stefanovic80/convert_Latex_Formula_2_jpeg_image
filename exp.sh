@@ -1,3 +1,4 @@
+touch B.tex
 texmaker B.tex
 pdflatex formula.tex
 python pdfEquations2Jpg.py
