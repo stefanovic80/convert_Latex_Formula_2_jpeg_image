@@ -1,4 +1,4 @@
-# convert_Latex_Formula_2_jpeg_image
+# Latex_2_jpeg_converter
 You may need a formula into an image file. For example you want to generate 
 a quiz of maths on Google Classroom and you don't know how to add questions 
 and aswers with mathematical formula.
