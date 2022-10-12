@@ -8,6 +8,6 @@ run it just by typing
 
 bush exp.sh
 
-than a texmaker evitor will be opened. Write down your formula there in between two
+than a texmaker editor will be opened. Write down your formula in between
 "$$" symbols. Save it and close it. In few seconds you'll get an image file of the 
 formula itself
